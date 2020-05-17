@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter SaaS Marketing`,
-    description: `A simple one page marketing starter for saas companies.`,
-    author: `Keegan Burkett`,
+    title: `Goodman Analytics`,
+    description: `Nicole Goodman at Goodman Analytics`,
+    author: `Nat Mattison`,
   },
+  pathPrefix: "/goodman-analytics-gatsby",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
