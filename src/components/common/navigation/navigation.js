@@ -12,10 +12,9 @@ import {
   NavListWrapper,
   MobileMenu,
   Mobile,
-  ActionsContainer,
 } from "./style"
 
-const NAV_ITEMS = ["Features", "Product", "Pricing", ""]
+const NAV_ITEMS = ["About", "Services", "Case Studies", "Blog", "Contact"]
 
 export default class Navigation extends Component {
   state = {
@@ -48,7 +47,7 @@ export default class Navigation extends Component {
   }
 
   getNavAnchorLink = item => (
-    <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
+    <AnchorLink href={`#${item.toLowerCase().split(" ").join("-")}`} onClick={this.closeMobileMenu}>
       {item}
     </AnchorLink>
   )
@@ -77,7 +76,7 @@ export default class Navigation extends Component {
           <Brand>
             <Scrollspy offset={-64} item={["top"]} currentClassName="active">
               <AnchorLink href="#top" onClick={this.closeMobileMenu}>
-                Finance
+                Goodman Analytics
               </AnchorLink>
             </Scrollspy>
           </Brand>
@@ -95,9 +94,6 @@ export default class Navigation extends Component {
           </Mobile>
 
           <Mobile hide>{this.getNavList({})}</Mobile>
-          <ActionsContainer>
-            <button>Sign up</button>
-          </ActionsContainer>
         </StyledContainer>
         <Mobile>
           {mobileMenuOpen && (
