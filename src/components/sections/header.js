@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 import { Container } from "../global"
@@ -27,10 +27,10 @@ const Header = () => {
               Goodman Analytics
             </h1>
             <h2>
-              Nicole Goodman, analyzing data in your clouds
+              Nicole Goodman, finding and monitoring untapped value in your datasets
             </h2>
             <FormSubtitle>
-              <FormSubtitleLink to="/">Download Resume</FormSubtitleLink>
+              <FormSubtitleLink href="https://www.linkedin.com/in/nicole-goodman-120b6718/">View my profile on LinkedIn</FormSubtitleLink>
             </FormSubtitle>
           </HeaderTextGroup>
           <ImageWrapper>
@@ -112,7 +112,7 @@ const FormSubtitle = styled.span`
   ${props => props.theme.font_size.xxsmall}
 `
 
-const FormSubtitleLink = styled(Link)`
+const FormSubtitleLink = styled.a`
   color: ${props => props.theme.color.secondary};
   padding-bottom: 1px;
   text-decoration: none;

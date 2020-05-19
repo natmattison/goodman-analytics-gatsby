@@ -9,12 +9,14 @@ import CaseStudies from "../components/sections/casestudies"
 import Blog from "../components/sections/blog"
 import Services from "../components/sections/services"
 import Contact from "../components/sections/contact"
+import About from "../components/sections/about"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Navigation />
     <Header />
+    <About />
     <Services />
     <CaseStudies />
     <Blog />
