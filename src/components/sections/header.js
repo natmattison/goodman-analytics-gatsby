@@ -183,12 +183,12 @@ const ImageWrapper = styled.div`
 `
 
 const StyledImage = styled(Img)`
-  width: 500px;
+  width: 320px;
   @media (max-width: ${props => props.theme.screen.md}) {
-    width: 400px;
+    width: 220px;
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
-    width: 300px;
+    width: 120px;
     display: none;
   }
 `
