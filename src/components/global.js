@@ -55,3 +55,14 @@ export const Section = styled.section`
         : props.theme.color.primary
     }`};
 `
+
+export const Flex = styled.div`
+  display: grid;
+  justify-content: space-between;
+  align-content: center;
+  grid-template-columns: 1fr 1fr;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    grid-template-columns: 1fr;
+    grid-gap: 64px;
+  }
+`

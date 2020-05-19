@@ -1,44 +1,22 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
 
 import { Container } from "../global"
 
 const Header = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(sourceInstanceName: { eq: "product" }, name: { eq: "goodman" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-    }
-  `)
 
   return (
     <HeaderWrapper id="top">
-      <Container>
-        <Flex>
-          <HeaderTextGroup>
-            <h1>
-              Goodman Analytics
-            </h1>
-            <h2>
-              Nicole Goodman, finding and monitoring untapped value in your datasets
-            </h2>
-            <FormSubtitle>
-              <FormSubtitleLink href="https://www.linkedin.com/in/nicole-goodman-120b6718/">View my profile on LinkedIn</FormSubtitleLink>
-            </FormSubtitle>
-          </HeaderTextGroup>
-          <ImageWrapper>
-            <StyledImage fluid={data.file.childImageSharp.fluid} />
-            <br />
-          </ImageWrapper>
-        </Flex>
-      </Container>
+      <StyledContainer>
+        <HeaderTextGroup>
+          <h1>
+            Goodman Analytics
+          </h1>
+          <h2>
+            Nicole Goodman, finding and monitoring untapped value in your datasets
+          </h2>
+        </HeaderTextGroup>
+      </StyledContainer>
     </HeaderWrapper>
   )
 }
@@ -59,9 +37,17 @@ const HeaderWrapper = styled.header`
 //   letter-spacing: 0px;
 //   margin-bottom: 16px;
 // `
+const StyledContainer = styled(Container)``
 
 const HeaderTextGroup = styled.div`
   margin: 0;
+  padding-bottom: 100px;
+  text-align: center;
+
+  @media (max-width: ${props => props.theme.screen.md}) {
+    text-align: left;
+  }
+
 
   > div {
     width: 120%;
@@ -85,17 +71,7 @@ const HeaderTextGroup = styled.div`
   p {
     margin-bottom: 48px;
   }
-`
-
-const Flex = styled.div`
-  display: grid;
-  justify-content: space-between;
-  align-content: center;
-  grid-template-columns: 1fr 1fr;
-  @media (max-width: ${props => props.theme.screen.md}) {
-    grid-template-columns: 1fr;
-    grid-gap: 64px;
-  }
+  
 `
 
 // const HeaderForm = styled.form`
@@ -174,21 +150,4 @@ const FormSubtitleLink = styled.a`
 //     margin-left: 0;
 //   }
 // `
-const ImageWrapper = styled.div`
-  justify-self: center;
-  align-self: center;
-  @media (max-width: ${props => props.theme.screen.md}) {
-    justify-self: center;
-  }
-`
 
-const StyledImage = styled(Img)`
-  width: 320px;
-  @media (max-width: ${props => props.theme.screen.md}) {
-    width: 220px;
-  }
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    width: 120px;
-    display: none;
-  }
-`
