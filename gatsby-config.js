@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Goodman Analytics`,
-    description: `Nicole Goodman at Goodman Analytics`,
+    description: `Nicole Goodman, finding and monitoring untapped value in your datasets`,
     author: `Nat Mattison`,
   },
   pathPrefix: "/goodman-analytics-gatsby",

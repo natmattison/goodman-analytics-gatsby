@@ -84,17 +84,6 @@ const HeaderTextGroup = styled.div`
 //   }
 // `
 
-const FormSubtitle = styled.span`
-  ${props => props.theme.font_size.xxsmall}
-`
-
-const FormSubtitleLink = styled.a`
-  color: ${props => props.theme.color.secondary};
-  padding-bottom: 1px;
-  text-decoration: none;
-  border-bottom: 1px solid ${props => props.theme.color.secondary};
-`
-
 // const HeaderInput = styled.input`
 //   font-weight: 500;
 //   font-size: 16px;
