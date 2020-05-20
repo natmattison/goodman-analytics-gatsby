@@ -21,6 +21,7 @@
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.10.2",
     "react-feather": "^2.0.3",
+    "react-ga": "^2.7.0",
     "react-helmet": "^5.2.1",
     "react-scrollspy": "^3.4.0",
     "styled-components": "^4.4.0"
@@ -34,12 +35,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",
@@ -47,8 +43,5 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "scripts": {
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   }
 }

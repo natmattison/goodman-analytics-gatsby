@@ -10,6 +10,9 @@ import Blog from "../components/sections/blog"
 import Services from "../components/sections/services"
 import Contact from "../components/sections/contact"
 import About from "../components/sections/about"
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-167215828-1');
 
 const IndexPage = () => (
   <Layout>
