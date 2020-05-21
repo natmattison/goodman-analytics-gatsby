@@ -66,6 +66,9 @@ const HeaderTextGroup = styled.div`
   h2 {
     margin-bottom: 24px;
     ${props => props.theme.font_size.regular}
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 680px;
   }
 
   p {
