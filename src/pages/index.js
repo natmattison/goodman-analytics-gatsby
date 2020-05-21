@@ -13,6 +13,7 @@ import About from "../components/sections/about"
 import ReactGA from 'react-ga';
 
 ReactGA.initialize('UA-167215828-1');
+ReactGA.pageview(window.location.pathname);
 
 const IndexPage = () => (
   <Layout>
