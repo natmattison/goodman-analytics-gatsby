@@ -13,7 +13,7 @@ const Header = () => {
             Goodman Analytics
           </h1>
           <h2>
-            Nicole Goodman, finding and monitoring untapped value in your datasets using the best statistical and data science methodologies
+            Nicole Goodman, finding and monitoring untapped value in your datasets using the best statistical and data science techniques
           </h2>
         </HeaderTextGroup>
       </StyledContainer>
