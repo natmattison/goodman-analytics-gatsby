@@ -4,7 +4,6 @@ module.exports = {
     description: `Nicole Goodman, finding and monitoring untapped value in your datasets`,
     author: `Nat Mattison`,
   },
-  pathPrefix: "/goodman-analytics-gatsby",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
