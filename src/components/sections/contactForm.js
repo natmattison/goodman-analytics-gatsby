@@ -42,7 +42,7 @@ class ContactForm extends React.Component {
     }
 
     return (
-      <StyledForm onSubmit={this.handleSubmit} data-netlify={true}>
+      <StyledForm name="contact" onSubmit={this.handleSubmit} data-netlify={true}>
         <FormInputWrapper>
           Your Name: <Input type="text" name="name" value={name} onChange={this.handleChange} />
         </FormInputWrapper>
