@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Goodman Analytics`,
-    description: `Nicole Goodman, finding and monitoring untapped value in your datasets`,
+    description: `Nicole Goodman, finding and monitoring untapped value in your datasets using the best statistical and data science techniques`,
     author: `Nat Mattison`,
   },
   plugins: [
