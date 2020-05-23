@@ -10,7 +10,7 @@ const encode = (data) => {
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", message: "", referrer: "empty" };
+    this.state = { name: "", email: "", message: "", howYouHeard: "empty" };
   }
 
   handleSubmit = e => {
@@ -28,7 +28,7 @@ class ContactForm extends React.Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, message, referrer, formSuccess, formError } = this.state;
+    const { name, email, message, howYouHeard, formSuccess, formError } = this.state;
     if (formSuccess) {
       return (
         <p>Thanks! Your message has been sent.</p>
@@ -54,7 +54,7 @@ class ContactForm extends React.Component {
         </FormInputWrapper>
         <FormInputWrapper>
           How did you hear about Goodman Analytics?
-          <FormSelect name="referrer" value={referrer} onChange={this.handleChange} >
+          <FormSelect name="howYouHeard" value={howYouHeard} onChange={this.handleChange} >
             <option value="empty">--</option>
             <option value="friend">I am a friend or acquaintance</option>
             <option value="linkedin">LinkedIn</option>
