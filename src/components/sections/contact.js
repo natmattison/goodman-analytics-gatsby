@@ -25,6 +25,7 @@ const ContactContainer = styled(Container)`
   align-items: center;
   flex-direction: column;
   padding: 80px 0 40px;
+  text-align: center;
 `
 
 const ContactTitle = styled.h3`
